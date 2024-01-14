@@ -1,0 +1,45 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke Tests Run" verbose="1" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="com.google.logging.TestStatuses"></listener>
+    </listeners>
+
+    <test name="Firefox">
+        <parameter name="browser" value="firefox"/>
+        <packages>
+            <package name="com.google.tests"></package>
+        </packages>
+    </test>
+
+<!--    <test name="Opera">-->
+<!--        <parameter name="browser" value="opera"/>-->
+<!--        <packages>-->
+<!--            <package name="com.google.tests"></package>-->
+<!--        </packages>-->
+<!--    </test>-->
+
+    <test name="Chrome">
+        <parameter name="browser" value="chrome"/>
+        <packages>
+            <package name="com.google.tests"></package>
+        </packages>
+    </test>
+
+    <test name="Edge">
+        <parameter name="browser" value="edge"/>
+        <packages>
+            <package name="com.google.tests"></package>
+        </packages>
+    </test>
+
+    <!--<test name="IE11">
+        <parameter name="browser" value="ie"/>
+        <classes>
+            <class name="com.google.tests.N_0001_SearchResultsClickingSearchButtonUnderSearchFieldTest"/>
+            <class name="com.google.tests.N_0002_SearchResultsClickingSearchButtonOnDropDownMenuTest"/>
+            <class name="com.google.tests.N_0003_SearchResultsClickingEnterButtonTest"/>
+            <class name="com.google.tests.N_0004_ClickSearchButtonWhenSearchFieldIsEmptyTest"/>
+        </classes>
+    </test>-->
+</suite>
