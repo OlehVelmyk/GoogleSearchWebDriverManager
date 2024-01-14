@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class N_0001_SearchResultsClickingSearchButtonUnderSearchFieldTest extends BaseTest {
 
-//    @Test(retryAnalyzer = RetryAnalyzer.class)
+    @Test(retryAnalyzer = RetryAnalyzer.class)
     public void searchResultsClickingSearchButtonUnderSearchField() {
         GoogleMainPage page = new GoogleMainPage(driver);
 
