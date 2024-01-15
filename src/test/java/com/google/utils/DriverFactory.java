@@ -32,7 +32,8 @@ public class DriverFactory {
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions edgeOptions = new EdgeOptions()
                         .addArguments("--no-sandbox")
-                        .addArguments("--disable-dev-shm-usage");
+                        .addArguments("--disable-dev-shm-usage")
+                        .addArguments("--headless");
 //                        .addArguments("--remote-debugging-port=<port>");
                 return new EdgeDriver(edgeOptions);
             case "ie":
