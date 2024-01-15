@@ -34,7 +34,7 @@ public abstract class BaseTest {
 
     @BeforeClass
     @Parameters("browser")
-    public void setUpDriver(@Optional("edge") String browser) {
+    public void setUpDriver(@Optional("chrome") String browser) {
         driver = new EventFiringWebDriver(initDriver(browser));
         driver.register(new EventHandler());
         setBrowserType(browser);
