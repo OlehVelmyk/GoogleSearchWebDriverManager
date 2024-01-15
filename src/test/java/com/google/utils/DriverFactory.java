@@ -4,9 +4,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
@@ -30,11 +28,11 @@ public class DriverFactory {
                 return new ChromeDriver();
             case "edge":
                 WebDriverManager.edgedriver().setup();
-                EdgeOptions edgeOptions = new EdgeOptions()
-                        .addArguments("--no-sandbox")
-                        .addArguments("--disable-dev-shm-usage")
-                        .addArguments("--remote-debugging-port=9222");
-                return new EdgeDriver(edgeOptions);
+//                EdgeOptions edgeOptions = new EdgeOptions()
+//                        .addArguments("--no-sandbox")
+//                        .addArguments("--disable-dev-shm-usage")
+//                        .addArguments("--remote-debugging-port=localhost:9222");
+                return new EdgeDriver();
             case "ie":
             case "internet explorer":
                 WebDriverManager.iedriver().setup();
