@@ -31,7 +31,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>${selenium4_java.version}</version>
+            <version>${selenium_java.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
